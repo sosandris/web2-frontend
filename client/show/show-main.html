@@ -16,6 +16,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="episode-title">
                 <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}} {{episode.text.title}}</a></span>
                 <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span>
+            
+            
+    <span class="textual" ng-bind-html="episode.text.formatted"></span>
+
+    <div style="line-height: 40px">
+    <span ng-repeat="tag in episode.tags">
+        <a ng-href="/tag/{{tag.name}}" class="btn btn-info">#{{tag.name}}</a>&nbsp;
+    </span>
+    </div>
+
+            
             </div>
         </div>
     </div>
