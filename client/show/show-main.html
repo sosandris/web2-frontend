@@ -18,7 +18,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span>
             
             
-    <span class="textual" ng-bind-html="!episode.original"></span>
+    <span class="textual" ng-bind-html="episode.text.formatted"></span>
 
     <div style="line-height: 40px">
     <span ng-repeat="tag in episode.tags">
