@@ -16,7 +16,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <listen-button class="pull-left" link="{{episode.m3uUrl}}"  ng-show="episode.plannedFrom >= 1270072800000"></listen-button>
 
             <div class="episode-title">
-                <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}} {{episode.text.title}}</a></span>
+                <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}}</a></span>
+            <div class="episode-title">
+                <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.text.title}}</a></span>
                 <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span>
             
     <span class="textual" ng-bind-html="episode.text.formatted"></span>
