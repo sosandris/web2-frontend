@@ -19,7 +19,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}}</a></span>
             <div class="episode-title">
                 <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.text.title}}</a></span>
-                <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span>
+                <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span></br>
             
     <span class="textual" ng-bind-html="episode.text.formatted"></span>
 
