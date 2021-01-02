@@ -1250,6 +1250,7 @@ a.div-link {
 
 .episode-title {
     font-size: 22px;
+    border-bottom: 20;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1269,7 +1270,7 @@ a.div-link {
 
 .episode-box {
     .panel-heading {
-        border-bottom: 20;
+        border-bottom: 0;
         overflow: hidden;
         padding-right: 10px;
         position: relative;
