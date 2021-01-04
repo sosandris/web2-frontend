@@ -1251,7 +1251,7 @@ a.div-link {
 .episode-title {
     font-size: 22px;
     border-bottom: 20;
-    white-space: nowrap;
+    white-space: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 
@@ -1275,7 +1275,7 @@ a.div-link {
         padding-right: 10px;
         position: relative;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        white-space: normal;
         .listen-show {
             position: absolute;
             right: 15px;
