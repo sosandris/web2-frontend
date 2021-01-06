@@ -1269,6 +1269,9 @@ a.div-link {
 }
 
 .episode-box {
+    a {
+          color: hotpink;
+        }
     .panel-heading {
         border-bottom: 0;
         overflow: hidden;
@@ -1276,9 +1279,6 @@ a.div-link {
         position: relative;
         text-overflow: ellipsis;
         white-space: normal;
-        a {
-          color: hotpink;
-        }
         .listen-show {
             position: absolute;
             right: 15px;
