@@ -1269,9 +1269,9 @@ a.div-link {
 }
 
 .episode-box {
-    a {
-          color: hotpink;
-        }
+    a:link {
+    color: red;
+    }
     .panel-heading {
         border-bottom: 0;
         overflow: hidden;
