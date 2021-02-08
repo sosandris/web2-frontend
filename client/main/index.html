@@ -176,16 +176,22 @@ Az egyhetes rádiós esemény indulásával párhuzamosan megújítjuk a webes T
 
 
     <div ng-show="next.length" class="program-guides">
-        <h2 class="red">Műsorajánló</h2>
+        <h2 class="blue top">Műsorajánló</h2>
         <div class="col-md-6 episode-next episode-list" data-ng-repeat="episode in next">
             <div class="spacer">
                 <p>
                     <show-label show="episode.show"></show-label>
                     <div class="main-date">{{episode.plannedFrom | date:'MMMM dd. - HH:mm'}}</div>
                 </p>
-                <h3><a ng-href="{{episode.url}}">{{episode.text.title | truncate:true:100:'...'}}</a></h3>
+                <h3><a ng-href="{{episode.url}}">{{episode.text.title | truncate:true:55:'...'}}</a></h3>
 
-                <div ng-bind-html="episode.text.formatted | truncate:true:240:'...'"></div>
+                <a ng-href="/show/{{episode.show.alias}}" class="div-link image-wrapper" ng-if="!hasPic(episode)">
+                <img ng-src="{{ getShowPic(episode) }}" ensure-pic alt="Adás borító" />
+                </a  class="div-link" ng-href="/show/{{episode.show.alias}}">
+                <a ng-bind-html="getPicFront(episode)" class="div-link" ng-href="/show/{{episode.show.alias}}"></a>
+                <a class="div-link" ng-href="/show/{{episode.show.alias}}" >
+                    <fade/>
+                </a>
             </div>
         </div>
     </div>
