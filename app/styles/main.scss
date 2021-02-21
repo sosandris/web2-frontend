@@ -55,7 +55,11 @@ hr {
 }
 
 .blue {
-    color: $lightblue;
+    // color: $lightblue;
+    color: $darkblue;
+}
+.dark-red {
+    color: $darkred;
 }
 
 .panel {
@@ -1204,13 +1208,20 @@ input.datepicker {
     overflow: hidden;
 }
 
-.episode-last.episode-list > .spacer {
-    padding: 5% 2% 2%;
-    border: 1px #35aadc solid;
-    vertical-align: top;
-    border-radius: 3px;
-    height: 35em;
-    overflow-y: clip;
+.episode-last.episode-list,
+.episode-next.episode-list  {
+    & > .spacer {
+        padding: 5% 2% 2%;
+        border: 1px $lightblue solid;
+        vertical-align: top;
+        border-radius: 3px;
+        height: 35em;
+        overflow-y: clip;
+    }
+}
+
+.episode-next.episode-list > .spacer {
+    border-color: #dfa5a5;
 }
 
 .episode-list img,
