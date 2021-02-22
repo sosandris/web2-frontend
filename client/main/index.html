@@ -204,10 +204,10 @@ Az egyhetes rádiós esemény indulásával párhuzamosan megújítjuk a webes T
                     <show-label show="episode.show"></show-label>
                     <div class="main-date hidden-xs">{{episode.plannedFrom | date:'yyyy. MMMM dd.'}}</div>
                 </p>
-                <h3>
+                <h4>
                     <listen-button class="pull-left" link="{{episode.m3uUrl}}"></listen-button>
                     <a ng-href="{{episode.url}}">{{episode.text.title | truncate:true:55:'...'}}</a>
-                </h3>
+                </h4>
                 <a ng-href="/show/{{episode.show.alias}}" class="div-link image-wrapper" ng-if="!hasPic(episode)">
                     <img ng-src="{{ getShowPic(episode) }}" ensure-pic alt="Adás borító" />
                 </a  class="div-link" ng-href="/show/{{episode.show.alias}}">
