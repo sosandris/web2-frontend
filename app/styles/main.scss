@@ -1199,15 +1199,17 @@ input.datepicker {
     margin-bottom: 10px;
 }
 
-.episode-last.episode-list:nth-child(2n) {
-    padding: 0 1% 0 0;
-    overflow: hidden;
-}
-.episode-last.episode-list:nth-child(2n+1) {
-    padding: 0 0 0 1%;
+.episode-last.episode-list:nth-child(2n),
+.episode-next.episode-list:nth-child(2n) {
+    padding : 0 1% 0 0;
     overflow: hidden;
 }
 
+.episode-last.episode-list:nth-child(2n+1),
+.episode-next.episode-list:nth-child(2n+1) {
+    padding : 0 0 0 1%;
+    overflow: hidden;
+}
 .episode-last.episode-list,
 .episode-next.episode-list  {
     & > .spacer {
