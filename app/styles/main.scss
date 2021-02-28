@@ -1297,8 +1297,19 @@ a.div-link {
             right: 15px;
             top: 10px;
         }
-        .episode-title a {
-            color: $primary-color;
+        .episode-title {
+            a {
+                
+                    color: $primary-color;
+            }
+
+            &>.episode-title {
+                height: 37em;
+
+                .textual a{
+                    color: $brand-danger;
+                }
+            }
         }
     }
 }

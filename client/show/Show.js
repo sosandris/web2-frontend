@@ -129,7 +129,7 @@ angularModule
 
 
 angularModule
-    .controller('ShowArchiveCtrl', function ($scope, $state, $stateParams, API_SERVER_ENDPOINT, $http, Meta) {
+    .controller('ShowArchiveCtrl', function ($scope, $state, $stateParams, $sce, API_SERVER_ENDPOINT, $http, Meta) {
         $scope.server = API_SERVER_ENDPOINT;
         Meta.setTitle($scope.show.name);
         if ($scope.show.definition) {
@@ -167,6 +167,10 @@ angularModule
         $http.get(`${API_SERVER_ENDPOINT}/api/v1/show/${$scope.show.id}/episodes?start=${dateFns.getTime(firstDayOfQuarter)}&end=${dateFns.getTime(lastDayOfQuarter)}`)
             .success(function (data) {
                 $scope.show.episodes = data;
+                $scope.show.episodes.forEach(episode => {
+                    episode.text.formatted = $sce.trustAsHtml(episode.text.formatted);
+                    return episode;
+                })
             });
 
         $scope.prev = function () {

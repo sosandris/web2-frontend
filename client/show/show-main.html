@@ -1,41 +1,42 @@
 <!-- Google Tag Manager (noscript) -->
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P6JV724"
-
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<!-- End Google Tag Manager (noscript) -->
-<div class="episode-tab">
-    <ul class="pager episode-box-pager">
-        <li class="cursorPointer prev-link" ng-hide="prevDisabled"><a ng-click="prev()">&larr; Korábbi adások</a></li>
-        <li class="cursorPointer next-link" ng-hide="nextDisabled"><a ng-click="next()">Későbbi adások &rarr;</a></li>
-    </ul>
-    <div class="panel panel-default episode-box" ng-repeat="episode in show.episodes">
-        <div class="panel-heading">
-            
-            <listen-button class="pull-left" link="{{episode.m3uUrl}}"  ng-show="episode.plannedFrom >= 1270072800000"></listen-button>
-
-            <div class="episode-title">
-                <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}}</a></span>
-            <div class="episode-title">
-                <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.text.title}}</a></span>
-                <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span></br>
-            
-    <span class="textual" ng-bind-html="episode.text.formatted"></span>
-
-    <div style="line-height: 40px">
-    <span ng-repeat="tag in episode.tags">
-        <a ng-href="/tag/{{tag.name}}" class="btn btn-info">#{{tag.name}}</a>&nbsp;
-    </span>
-    </div>
-
-            
+    
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="episode-tab">
+        <ul class="pager episode-box-pager">
+            <li class="cursorPointer prev-link" ng-hide="prevDisabled"><a ng-click="prev()">&larr; Korábbi adások</a></li>
+            <li class="cursorPointer next-link" ng-hide="nextDisabled"><a ng-click="next()">Későbbi adások &rarr;</a></li>
+        </ul>
+        <div class="panel panel-default episode-box" ng-repeat="episode in show.episodes">
+            <div class="panel-heading">
+                
+                <listen-button class="pull-left" link="{{episode.m3uUrl}}"  ng-show="episode.plannedFrom >= 1270072800000"></listen-button>
+                
+                <div class="episode-title">
+                    <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.plannedFrom| date:'yyyy.MM.dd.'}}</a></span>
+                    <div class="episode-title">
+                        <a ng-show="episode.persistent" ng-href="{{episode.url}}">{{episode.text.title}}</a></span>
+                        <span ng-hide="episode.persistent">{{episode.plannedFrom| date: 'yyyy.MM.dd.'}}</span></br>
+                        
+                        <span class="textual" ng-bind-html="episode.text.formatted"></span>
+                        
+                        <div style="line-height: 40px">
+                            <span ng-repeat="tag in episode.tags">
+                                <a ng-href="/tag/{{tag.name}}" class="btn btn-info">#{{tag.name}}</a>&nbsp;
+                            </span>
+                        </div>
+                        
+                        <fade></fade>
+                    </div>
+                </div>
             </div>
+            
         </div>
-    </div>
-
-</div>
-<ul class="pager episode-box-pager">
-    <li class="cursorPointer prev-link" ng-hide="prevDisabled"><a ng-click="prev()">&larr; Korábbi adások</a></li>
-    <li class="cursorPointer next-link" ng-hide="nextDisabled"><a ng-click="next()">Későbbi adások &rarr;</a></li>
-</ul>
+        <ul class="pager episode-box-pager">
+            <li class="cursorPointer prev-link" ng-hide="prevDisabled"><a ng-click="prev()">&larr; Korábbi adások</a></li>
+            <li class="cursorPointer next-link" ng-hide="nextDisabled"><a ng-click="next()">Későbbi adások &rarr;</a></li>
+        </ul>
+        
