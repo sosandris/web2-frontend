@@ -1304,7 +1304,7 @@ a.div-link {
             }
 
             &>.episode-title {
-                height: 37em;
+                height: max-height;
 
                 .textual a{
                     color: $brand-danger;
