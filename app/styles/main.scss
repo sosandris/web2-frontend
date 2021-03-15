@@ -1224,6 +1224,10 @@ input.datepicker {
 
 .episode-next.episode-list > .spacer {
     border-color: #dfa5a5;
+
+    h4 {
+        height: 2.8em;
+    }
 }
 
 .episode-list img,
@@ -1304,7 +1308,7 @@ a.div-link {
             }
 
             &>.episode-title {
-                height: max-height;
+                max-height: 37em;
 
                 .textual a{
                     color: $brand-danger;

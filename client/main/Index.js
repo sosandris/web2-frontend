@@ -163,6 +163,8 @@ angularModule.controller('MainCtrl', function ($scope, $http, API_SERVER_ENDPOIN
             var wrapper2 = '</p>';
             episode.text.formatted = html.replace(re, "$2$1$3");
             return wrapper1 + episode.text.formatted + wrapper2;
+        } else {
+            return html;
         }
     }
 });
