@@ -16,7 +16,6 @@ angularModule.component('listenNow', {
                <a href="http://stream.tilos.hu/mese" class="btn btn-lg col-xs-12 btn-danger">Tilos Mesék </a>\
                <a href="http://stream.tilos.hu/tordas_radio_online" class="btn btn-lg col-xs-12 btn-danger">Tordas Rádió </a>\
                </div>\
-               </div>\
                </div>',
     controller: function () {
     }
