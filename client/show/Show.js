@@ -168,7 +168,7 @@ angularModule
             .success(function (data) {
                 $scope.show.episodes = data;
                 $scope.show.episodes.forEach(episode => {
-                    episode.text.formatted = $sce.trustAsHtml(episode.text.formatted);
+                    episode.text && (episode.text.formatted = $sce.trustAsHtml(episode.text.formatted));
                     return episode;
                 })
             });
